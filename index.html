@@ -21,6 +21,10 @@
         d3.select("q").text("paragraph with tag q");
         d3.select("q").append("p").text("New  para");
         d3.select("input").property("checked",true);
+        d3.select("#p1")
+      .transition()
+      .duration(1000)
+      .style("background-color", "green");
     </script>
 </body>
 </html>
