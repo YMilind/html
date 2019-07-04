@@ -7,6 +7,9 @@
     <p></p>
     <p></p>
     <p></p>
+    
+    <q>Error: This is dummy error.</p>
+    <q>Warning:This is dummy warning.</p>
 
     <script>
         var data = [1, 2, 3];
@@ -20,6 +23,16 @@
 
                     return d;
                 });
+         //Setting Attribute Value Dynamically
+        d3.selectAll("q").style("color", function(d, i) {
+            var text = this.innerText;
+        
+            if (text.indexOf("Error") >= 0) {
+                return "red";
+            } else if (text.indexOf("Warning") >= 0) {
+                return "yellow";
+            }
+    });
     </script>
 </body>
 </html>
